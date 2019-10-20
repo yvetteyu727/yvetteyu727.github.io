@@ -16,19 +16,11 @@
                 <table id="data-table" class="table table-bordered">  
                      <thead>  
                           <tr>  
-                               <th>survey_id</th>  
                                <th>recordID</th>  
                                <th>date</th>  
-                               <th>period</th>
-                               <th>plot_id</th>
-                               <th>plot</th>
-                               <th>note1</th>
-                               <th>stake</th>
                                <th>species</th>
                                <th>scientificName</th>
                                <th>locality</th>
-                               <th>decimalLatitude</th>
-                               <th>decimalLongitud</th>
                                <th>county</th>
                                <th>state</th>
                                <th>country</th>
@@ -42,20 +34,12 @@
  $(document).ready(function(){  
       $('#data-table').DataTable({  
            "ajax"     :     "people_data.json",  
-           "columns"     :     [  
-                {     "data"     :     "survey_id"},  
+           "columns"     :     [   
                 {     "data"     :     "recordID"},  
                 {     "data"     :     "date"},
-                {     "data"     :     "period"},  
-                {     "data"     :     "plot_id"},  
-                {     "data"     :     "plot"},
-                {     "data"     :     "note1"},   
-                {     "data"     :     "stake"},
                 {     "data"     :     "species"     },  
                 {     "data"     :     "scientificName"},  
                 {     "data"     :     "locality"},
-                {     "data"     :     "decimalLatitude"     },  
-                {     "data"     :     "decimalLongitude"},  
                 {     "data"     :     "county"},
                 {     "data"     :     "state"},  
                 {     "data"     :     "country"},
