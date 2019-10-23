@@ -23,13 +23,11 @@ $(document).ready(function(){
         $.getJSON(airtable_read_endpoint, function(result) {
                $.each(result.records, function(key,value) {
                    items = [];
-                       items.push(value.fields.company);
-                       items.push(value.fields.product_code);
-                       items.push(value.fields.product_no);
-                       items.push(value.fields.geocode2);
-                       items.push(value.fields.json);
-                       items.push(value.fields.gender);
-                       items.push(value.fields.name);
+                       items.push(value.fields.collaboration_brands);
+                       items.push(value.fields.description);
+                       items.push(value.fields.collaboration_products);
+                       items.push(value.fields.picture);
+                       items.push(value.fields.release_date);
                        dataSet.push(items);
                        console.log(items);
                 }); // end .each
