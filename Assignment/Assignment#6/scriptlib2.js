@@ -15,6 +15,8 @@ $(document).ready(function(){
         $x.empty();
     });
 
+    
+
     $("button#get_data").click(function() {
         var items = [];
         var i = 0;
@@ -26,8 +28,7 @@ $(document).ready(function(){
                        items.push(value.fields.collaboration_brands);
                        items.push(value.fields.description);
                        items.push(value.fields.collaboration_products);
-                       items.push(value.fields.picture);
-                       items.push(value.fields.release_date);
+                       items.push(value.fields.release_date);       
                        dataSet.push(items);
                        console.log(items);
                 }); // end .each
@@ -37,20 +38,15 @@ $(document).ready(function(){
                  data: dataSet,
                  retrieve: true,
                  columns: [
-                     { title: "Company",
+                     { title: "Collaboration Brands",
                        defaultContent:""},
-                     { title: "Product",
+                     { title: "Description",
                          defaultContent:"" },
-                     { title: "Number",
+                     { title: "Collaboration Products",
                        defaultContent:"" },
-                     { title: "Geo Code",
+                     { title: "Release Date",
                        defaultContent:""},
-                     { title: "JSON",
-                         defaultContent:""},
-                     { title: "Gender",
-                       defaultContent:""},
-                     { title: "Name",
-                       defaultContent:""},
+                     
                  ]
              } );
         }); // end .getJSON
