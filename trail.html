@@ -9,17 +9,22 @@
         <div id="chart"></div>
         <script>
         var chart = c3.generate({
-            data: {
-                columns: [
-                    ['Lulu', 50],
-                    ['Olaf', 50],
-                    ],
-                    type : 'donut'
-                    },
-                    donut: {
-                        title: "Dogs love:",
-                        }
-                        });
+    data: {
+        columns: [
+            ['sample', 30, 200, 100, 400, 150, 250],
+            ['sample2', 130, 300, 200, 500, 250, 350]
+        ],
+
+    },
+    axis: {
+        x: {
+            label: 'X Label'
+        },
+        y: {
+            label: 'Y Label'
+        }
+    }
+});
         </script>
     </body>
 </html>
