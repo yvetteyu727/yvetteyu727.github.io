@@ -18,7 +18,7 @@ $(document).ready(function(){
     $("button#get_data").click(function() {
         var items = [];
         var i = 0;
-        var airtable_read_endpoint = "https://api.airtable.com/v0/appKIU0zkdHt3AVTL/Product?api_key=keycj6dRwXwYLEjiv";
+        var airtable_read_endpoint = "https://api.airtable.com/v0/appgICyhmd6OTt7DA/Location?api_key=keypxZMYMv2UUxEw3";
         var dataSet = [];
         $.getJSON(airtable_read_endpoint, function(result) {
                $.each(result.records, function(key,value) {
