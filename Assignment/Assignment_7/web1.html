@@ -57,18 +57,18 @@
     var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
     var map = L.map('map')
           .addLayer(mapboxTiles)
-          .setView([22.287111, 114.191667], 13);
+          .setView([35.235089, 118.310776], 4);
     var items = [];
     var airtable_read_endpoint = "https://api.airtable.com/v0/appgICyhmd6OTt7DA/Location?api_key=keypxZMYMv2UUxEw3";
     var data = [];
     $.getJSON(airtable_read_endpoint, function(result) {
            $.each(result.records, function(key,value) {
                items = {};
-                   items["City"] = value.fields.City;
+                   items["city"] = value.fields.city;
                    items["url"] = value.fields.url;
                    items["image_url"] = value.fields.img_url;
-                   items["Lat"] = value.fields.Lat;
-                   items["Lng"] = value.fields.Lng;
+                   items["lat"] = value.fields.lat;
+                   items["lng"] = value.fields.lng;
                    data.push(items);
                    console.log(items);
             }); // end .each
