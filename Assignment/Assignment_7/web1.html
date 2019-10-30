@@ -67,8 +67,8 @@
                    items["location"] = value.fields.location;
                    items["url"] = value.fields.url;
                    items["image_url"] = value.fields.image_url;
-                   items["latitud"] = value.fields.latitud;
-                   items["longitud"] = value.fields.longitud;
+                   items["latitud"] = value.fields.Lat;
+                   items["longitud"] = value.fields.Lng;
                    data.push(items);
                    console.log(items);
             }); // end .each
@@ -78,7 +78,7 @@
   <script>
     function show_districts(){
       for (var i in data) {
-          var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+          var latlng = L.latLng({lat: data[i].latitud, lng: data[i].longitud });
           L.marker( latlng )
               .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].location + '</a>' )
               .addTo(map);
