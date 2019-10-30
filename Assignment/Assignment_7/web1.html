@@ -66,7 +66,6 @@
            $.each(result.records, function(key,value) {
                items = {};
                    items["location"] = value.fields.location;
-                   items["collaboration"] = value.fields.collaboration;
                    items["url"] = value.fields.url;
                    items["image_url"] = value.fields.image_url;
                    items["lat"] = value.fields.lat;
@@ -82,7 +81,7 @@
       for (var i in data) {
           var latlng = L.latLng({ lat: data[i].lat, lng: data[i].lng });
           L.marker( latlng )
-              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>' + data[i].collaboration + '</a>' )
+              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>' + data[i].location + '</a>' )
               .addTo(map);
       }
     }
