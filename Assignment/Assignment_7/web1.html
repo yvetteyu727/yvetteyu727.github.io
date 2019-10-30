@@ -66,6 +66,7 @@
            $.each(result.records, function(key,value) {
                items = {};
                    items["location"] = value.fields.location;
+                   items["collaboration"] = value.fields.collaboration;
                    items["url"] = value.fields.url;
                    items["image_url"] = value.fields.image_url;
                    items["lat"] = value.fields.lat;
