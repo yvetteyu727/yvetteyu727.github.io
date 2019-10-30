@@ -39,13 +39,10 @@
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
           <li class="sidebar-brand">
-              <button type="button" class="btn btn-warning" id='get_data2'>Show Total</button><br>
+              <button type="button" class="btn btn-warning" id='get_data2'>Show Chart</button><br>
           </li>
           <li>
-              <a href="get_data2">Show Chart</a>
-          </li>
-          <li>
-              <a href="roll_up">Show Map</a>
+              <button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">Show Districts</button><br>
           </li>
       </ul>
   </div>
@@ -69,7 +66,7 @@
           <h1>Leaflet Example</h1>
           <div class="row">
              <div class="col-xs-12 col-sm-12 col-md-12">
-               <button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">Show Districts</button><br>
+               
               <div id="map" style="width: 600px; height: 400px"></div>
              </div><!-- column -->
           </div><!-- row -->
