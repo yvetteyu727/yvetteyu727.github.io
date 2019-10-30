@@ -82,7 +82,7 @@
       for (var i in data) {
           var latlng = L.latLng({ lat: data[i].lat, lng: data[i].lng });
           L.marker( latlng )
-              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>' + data[i].location + '</a>' )
+              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>' + data[i].collaboration + '</a>' )
               .addTo(map);
       }
     }
