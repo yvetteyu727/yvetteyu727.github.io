@@ -58,6 +58,7 @@
     var map = L.map('map')
           .addLayer(mapboxTiles)
           .setView([35.235089, 118.310776], 4);
+    var marker = L.marker([35.235089, 118.310776]).addTo(map);
     var items = [];
     var airtable_read_endpoint = "https://api.airtable.com/v0/appgICyhmd6OTt7DA/Location?api_key=keypxZMYMv2UUxEw3";
     var data = [];
