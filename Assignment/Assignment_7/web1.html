@@ -78,9 +78,9 @@
   <script>
     function show_districts(){
       for (var i in data) {
-          var latlng = L.latLng({ lat: data[i].Lat, lng: data[i].Lng });
+          var latlng = L.latLng({ lat: data[i].lat, lng: data[i].lng });
           L.marker( latlng )
-              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].City + '</a>' )
+              .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].city + '</a>' )
               .addTo(map);
       }
     }
