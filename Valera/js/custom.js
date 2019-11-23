@@ -194,7 +194,7 @@ $(window).load(function() {
 });
 
 
-$("button#get_data").click(function() {
+$("button#get_data1").click(function() {
   var items = [];
   var i = 0;
   var airtable_read_endpoint = "https://api.airtable.com/v0/appV5pK0HNZkfkQ2f/chuanCuisine_signature?api_key=keypxZMYMv2UUxEw3";
