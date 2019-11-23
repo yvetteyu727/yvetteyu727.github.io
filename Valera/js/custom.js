@@ -1,56 +1,15 @@
 /*global jQuery:false */
 (function($) {
 
-  var  items = [];
-  var i = 0;
-  var airtable_read_endpoint = "https://api.airtable.com/v0/appf1f9Jo9tPha7wJ/museum?api_key=keyLZQGPBz655pCmy";
-  var dataSet = [];
-  $.getJSON(airtable_read_endpoint, function(result) {
-         $.each(result.records, function(key,value) {
-           items = [];
-           items.push(value.fields.restaurant_name);
-           items.push(value.fields.pronunciation);
-            items.push(value.fields.city);
-
-
-            dataSet.push( items);
-          }); // end .each
-       $("#table1").DataTable( {
-           data:  dataSet,
-           scrollY:'100vh',
-           "scrollX": true,
-           scrollCollapse:true,
-           retrieve: true,
-           columns: [
-             { title: "Restaurant name",
-                 defaultContent:"" },
-             { title: "Pronunciation",
-               defaultContent:"" },
-             { title: "City",
-               defaultContent:""},
-            ],
-            initComplete: function () {
-             this.api().columns().every( function () {
-             var column = this;
-             var select = $('<select><option value=""></option></select>')
-                 .appendTo( $(column.footer()).empty() )
-                 .on( 'change', function () {
-                     var val = $.fn.dataTable.util.escapeRegex(
-                         $(this).val()
-                     );
-
-                     column
-                         .search( val ? '^'+val+'$' : '', true, false )
-                         .draw();
-                 } );
-
-             column.data().unique().sort().each( function ( d, j ) {
-                 select.append( '<option value="'+d+'">'+d+'</option>' )
-             } );
-             } );
-             }
-             } );
-        }); // end .getJSON
+  $('#data-table').DataTable({  
+    "ajax"     :     "restaurant data/chuan_restaurant.json",  
+    "columns"     :     [   
+         {     "data"     :     "restaurant_name"},  
+         {     "data"     :     "pronunciation"},
+         {     "data"     :     "city"     },  
+         
+    ]  
+});  
 
 
 
