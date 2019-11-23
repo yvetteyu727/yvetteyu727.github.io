@@ -394,9 +394,8 @@
               <p>Explore Authentic Chinese Food</p>
             </div>
           </div>
-          <div class="container">  
-            <h3 align="center">Patients Database</h3><br />  
-            <table id="data-table" class="table table-bordered">  
+          <div class="container text-left color-dark">  
+            <table id="data-table1" class="table table-bordered">  
                  <thead>  
                       <tr>  
                            <th>Restaurant name</th>  
@@ -415,7 +414,11 @@
       </div>
 
     </div>
-
+    <button type="button" class="btn btn-warning" id='get_data'>Show Table</button><br>
+    <div class="table-responsive">
+          <table id="table1" width="100%" class="table table-bordered"></table>
+    </div>
+  
    
   </section>
 
@@ -637,7 +640,7 @@
 
 <script>  
   $(document).ready(function(){  
-       $('#data-table').DataTable({  
+       $('#data-table1').DataTable({  
             "ajax"     :     "json/chuan_restaurant.json",  
             "columns"     :     [   
                  {     "data"     :     "restaurant_name"},  
