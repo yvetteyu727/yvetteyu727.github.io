@@ -194,7 +194,7 @@ $(window).load(function() {
 });
 
 
-$("button#get_data1").click(function() {
+$("button#chuan_restaurant").click(function() {
   var items = [];
   var i = 0;
   var airtable_read_endpoint = "https://api.airtable.com/v0/appV5pK0HNZkfkQ2f/chuanCuisine_signature?api_key=keypxZMYMv2UUxEw3";
@@ -221,19 +221,19 @@ $("button#get_data1").click(function() {
            columns: [
             { title: "Restaurant name",
             defaultContent:""},
-          { title: "Pronunciation",
+            { title: "Pronunciation",
               defaultContent:"" },
-          { title: "City",
+            { title: "City",
             defaultContent:"" },
-          { title: "Per-capita consumption",
+            { title: "Per-capita consumption",
             defaultContent:""},
-          { title: "Rating (Out of 5)",
+            { title: "Rating (Out of 5)",
             defaultContent:""},  
-          { title: "Address",
+            { title: "Address",
             defaultContent:""},
-          { title: "Opening hours",
+            { title: "Opening hours",
             defaultContent:""}, 
-          { title: "Telephone number",
+            { title: "Telephone number",
             defaultContent:""},
            ]
        } );
