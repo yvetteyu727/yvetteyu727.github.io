@@ -411,14 +411,15 @@
                  </thead>  
             </table>  
        </div>  -->
-        </div>
-      </div>
-
-    </div>
-    <button type="button" class="btn btn-warning" id='chuan_restaurant'>Show Table</button><br>
+       <button type="button" class="btn btn-warning" id='chuan_restaurant'>Show Table</button><br>
     <div class="table-responsive table">
           <table id="table_1" width="100%" class="table table-bordered"></table>
     </div>
+      </div>
+      </div>
+
+    </div>
+    
   
    
   </section>
@@ -656,10 +657,10 @@
             ]  
        });  
   });  
-  </script> 
+  </script> -->
 
 <script>
-  $("button#get_data1").click(function() {
+$("button#chuan_restaurant").click(function() {
   var items = [];
   var i = 0;
   var airtable_read_endpoint = "https://api.airtable.com/v0/appV5pK0HNZkfkQ2f/chuanCuisine_signature?api_key=keypxZMYMv2UUxEw3";
@@ -680,28 +681,28 @@
           }); // end .each
           console.log(dataSet);
 
-       $('#table1').DataTable( {
+       $('#table_1').DataTable( {
            data: dataSet,
            retrieve: true,
            columns: [
             { title: "Restaurant name",
             defaultContent:""},
-          { title: "Pronunciation",
+            { title: "Pronunciation",
               defaultContent:"" },
-          { title: "City",
+            { title: "City",
             defaultContent:"" },
-          { title: "Per-capita consumption",
+            { title: "Per-capita consumption",
             defaultContent:""},
-          { title: "Rating (Out of 5)",
+            { title: "Rating (Out of 5)",
             defaultContent:""},  
-          { title: "Address",
+            { title: "Address",
             defaultContent:""},
-          { title: "Opening hours",
+            { title: "Opening hours",
             defaultContent:""}, 
-          { title: "Telephone number",
+            { title: "Telephone number",
             defaultContent:""},
            ]
        } );
   }); // end .getJSON
 });
-</script>-->
+</script>
