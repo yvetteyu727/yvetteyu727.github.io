@@ -205,17 +205,17 @@ $("button#chuan_restaurant").click(function() {
              items.push(value.fields.restaurant_name);
              items.push(value.fields.pronunciation);
              items.push(value.fields.city);
-           /items.push(value.fields.per_capita_consumption);
+             items.push(value.fields.per_capita_consumption);
              items.push(value.fields.rating);
              items.push(value.fields.address);   
              items.push(value.fields.opening_hour);   
-             items.push(value.fields.telephone_number);/
+             items.push(value.fields.telephone_number);
                  dataSet.push(items);
                  console.log(items);
           }); // end .each
           console.log(dataSet);
 
-       $('#table1').DataTable( {
+       $('#table_1').DataTable( {
            data: dataSet,
            retrieve: true,
            columns: [
@@ -225,7 +225,7 @@ $("button#chuan_restaurant").click(function() {
               defaultContent:"" },
             { title: "City",
             defaultContent:"" },
-            /{ title: "Per-capita consumption",
+            { title: "Per-capita consumption",
             defaultContent:""},
             { title: "Rating (Out of 5)",
             defaultContent:""},  
@@ -234,7 +234,7 @@ $("button#chuan_restaurant").click(function() {
             { title: "Opening hours",
             defaultContent:""}, 
             { title: "Telephone number",
-            defaultContent:""},/
+            defaultContent:""},
            ]
        } );
   }); // end .getJSON
