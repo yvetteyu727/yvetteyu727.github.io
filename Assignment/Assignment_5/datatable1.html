@@ -19,11 +19,7 @@
                                <th>recordID</th>  
                                <th>date</th>  
                                <th>species</th>
-                               <th>scientificName</th>
-                               <th>locality</th>
-                               <th>county</th>
-                               <th>state</th>
-                               <th>country</th>
+       
                           </tr>  
                      </thead>  
                 </table>  
@@ -35,14 +31,9 @@
       $('#data-table').DataTable({  
            "ajax"     :     "people_data.json",  
            "columns"     :     [   
-                {     "data"     :     "recordID"},  
-                {     "data"     :     "date"},
-                {     "data"     :     "species"     },  
-                {     "data"     :     "scientificName"},  
-                {     "data"     :     "locality"},
-                {     "data"     :     "county"},
-                {     "data"     :     "state"},  
-                {     "data"     :     "country"},
+                {     "data"     :     "rrestaurant_name"},  
+                {     "data"     :     "pronunciation"},
+                {     "data"     :     "city"     },  
                 
            ]  
       });  
