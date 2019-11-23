@@ -1,7 +1,7 @@
 /*global jQuery:false */
 (function($) {
 
-/  $('#data-table').DataTable({  
+  $('#data-table').DataTable({  
     "ajax"     :     "restaurant data/chuan_restaurant.json",  
     "columns"     :     [   
          {     "data"     :     "restaurant_name"},  
@@ -9,7 +9,7 @@
          {     "data"     :     "city"     },  
          
     ]  
-});  /
+});  
 
 
 
