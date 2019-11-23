@@ -658,3 +658,50 @@
   });  
   </script> 
 -->
+<script>
+  $("button#get_data1").click(function() {
+  var items = [];
+  var i = 0;
+  var airtable_read_endpoint = "https://api.airtable.com/v0/appV5pK0HNZkfkQ2f/chuanCuisine_signature?api_key=keypxZMYMv2UUxEw3";
+  var dataSet = [];
+  $.getJSON(airtable_read_endpoint, function(result) {
+         $.each(result.records, function(key,value) {
+             items = [];
+             items.push(value.fields.restaurant_name);
+             items.push(value.fields.pronunciation);
+             items.push(value.fields.city);
+             items.push(value.fields.per_capita_consumption);
+             items.push(value.fields.rating);
+             items.push(value.fields.address);   
+             items.push(value.fields.opening_hour);   
+             items.push(value.fields.telephone_number);
+                 dataSet.push(items);
+                 console.log(items);
+          }); // end .each
+          console.log(dataSet);
+
+       $('#table1').DataTable( {
+           data: dataSet,
+           retrieve: true,
+           columns: [
+            { title: "Restaurant name",
+            defaultContent:""},
+          { title: "Pronunciation",
+              defaultContent:"" },
+          { title: "City",
+            defaultContent:"" },
+          { title: "Per-capita consumption",
+            defaultContent:""},
+          { title: "Rating (Out of 5)",
+            defaultContent:""},  
+          { title: "Address",
+            defaultContent:""},
+          { title: "Opening hours",
+            defaultContent:""}, 
+          { title: "Telephone number",
+            defaultContent:""},
+           ]
+       } );
+  }); // end .getJSON
+});
+</script>
