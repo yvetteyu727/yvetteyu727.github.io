@@ -188,10 +188,22 @@
   $(window).load(initNice);
   $(window).resize(initNice);
 
+  // Hide navbar when modals trigger
+  $('.portfolio-modal').on('show.bs.modal', function(e) {
+    $('.navbar').addClass('d-none');
+  })
+  $('.portfolio-modal').on('hidden.bs.modal', function(e) {
+    $('.navbar').removeClass('d-none');
+  })
+
+  
+
 })(jQuery);
 $(window).load(function() {
   $(".loader").delay(300).fadeOut();
   $("#page-loader").delay(500).fadeOut("slow");
 });
+
+
 
 
