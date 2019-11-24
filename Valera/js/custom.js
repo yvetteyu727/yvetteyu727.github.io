@@ -10,6 +10,9 @@ $(document).ready(function(){
 $("button#yuebtn").click(function() {
   $("#yuedish").slideToggle(300);
 });
+$("button#huaiyangbtn").click(function() {
+  $("#huaiyangdish").slideToggle(300);
+});
     
          });
          
@@ -248,7 +251,7 @@ function show_districts(){
   for (var i in data) {
     var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
     L.marker( latlng )
-    .bindPopup( data[i].restaurant_name + data[i].city + data[i].rating)
+    .bindPopup(data[i].restaurant_name + data[i].city + data[i].rating)
     .addTo(layerGroup);};
                     };
 
