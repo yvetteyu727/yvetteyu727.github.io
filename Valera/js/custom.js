@@ -1,4 +1,19 @@
 /*global jQuery:false */
+$(document).ready(function(){
+  $("button#chuanbtn").click(function() {
+      $("#chuandish").slideToggle(300);
+  });});
+  $(document).ready(function(){ 
+  $("button#lubtn").click(function() {
+    $("#ludish").slideToggle(300);
+});
+$("button#yuebtn").click(function() {
+  $("#yuedish").slideToggle(300);
+});
+    
+         });
+         
+
 (function($) {
 
 
@@ -203,6 +218,40 @@ $(window).load(function() {
   $(".loader").delay(300).fadeOut();
   $("#page-loader").delay(500).fadeOut("slow");
 });
+
+var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,}).addTo(map);
+                    var map = L.map('map')
+                          .addLayer(mapboxTiles)
+                          .setView([31.217756, 121.488283], 12);
+
+
+/layerGroup = L.layerGroup().addTo(map);/
+
+var items = [];
+var airtable_read_endpoint = "https://api.airtable.com/v0/appT9Y78c8u6UPG0h/yue?api_key=keypxZMYMv2UUxEw3";
+var data = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+  $.each(result.records, function(key,value) {
+    items = {};
+    items["restaurant name"] = value.fields.restaurant_name;
+    items["city"] = value.fields.city;
+    items["per capita consumption"] = value.fields.per_capita_consumption;
+    items["rating"] = value.fields.rating
+    items["latitud"] = value.fields.Lat;
+    items["longitud"] = value.fields.Lng;
+    data.push(items);
+    console.log(items);
+                            }); // end .each
+                    }); // end getJSON
+       
+function show_districts(){
+  for (var i in data) {
+    var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+    L.marker( latlng )
+    .bindPopup( data[i].restaurant_name + data[i].city + data[i].rating)
+    .addTo(layerGroup);};
+                    };
+
 
 
 

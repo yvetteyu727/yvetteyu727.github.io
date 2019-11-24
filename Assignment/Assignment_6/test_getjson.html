@@ -43,3 +43,52 @@
 </body>
 </html>
 </html>
+var  items = [];
+    var i = 0;
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appT9Y78c8u6UPG0h/chuan?api_key=keypxZMYMv2UUxEw3";
+    var dataSet = [];
+    $.getJSON(airtable_read_endpoint, function(result) {
+           $.each(result.records, function(key,value) {
+             items = [];
+             items.push(value.fields.restaurant_name);
+             items.push(value.fields.pronunciation);
+              items.push(value.fields.city);
+  
+              dataSet.push(items);
+            }); // end .each
+         $("#table1").DataTable( {
+             data:  dataSet,
+             scrollY:'100vh',
+             "scrollX": true,
+             scrollCollapse:true,
+             retrieve: true,
+             columns: [
+               { title: "Ranking",
+                   defaultContent:"" },
+               { title: "Museum Name",
+                 defaultContent:"" },
+               { title: "Image",
+                 defaultContent:""},
+              ],
+              initComplete: function () {
+               this.api().columns().every( function () {
+               var column = this;
+               var select = $('<select><option value=""></option></select>')
+                   .appendTo( $(column.footer()).empty() )
+                   .on( 'change', function () {
+                       var val = $.fn.dataTable.util.escapeRegex(
+                           $(this).val()
+                       );
+  
+                       column
+                           .search( val ? '^'+val+'$' : '', true, false )
+                           .draw();
+                   } );
+  
+               column.data().unique().sort().each( function ( d, j ) {
+                   select.append( '<option value="'+d+'">'+d+'</option>' )
+               } );
+               } );
+               }
+               });
+          });
