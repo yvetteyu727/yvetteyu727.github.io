@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>This is a paragraph1.</p>
+        <button class="btn1">Toggle</button>
+        <p>This is a paragraph2.</p>
+        <button class="btn1">Toggle</button>
+    </body>
+</html>
+<script>
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    for (let i = 0; i < document.getElementsByClassName('btn1').length; i++){
+      $("p:eq(" + i + ")").slideUp();
+    }
+  });
+  $("p:eq(" + $(this).index(".btn1") + ")").slideToggle();
+});
+</script>

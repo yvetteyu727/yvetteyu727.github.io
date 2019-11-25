@@ -1542,7 +1542,7 @@ Parallax
     background: #ffcc00;
 }
 
-/* Google Map */
+/* Google Map *
 #map{
 	position: relative;
 	overflow: hidden;
@@ -1551,7 +1551,7 @@ Parallax
 	transition: all 0.7s;
 }
 
-/* Open and Close Styles */
+/* Open and Close Styles *
 .close-map{
 	height: 0;
 }
@@ -1560,7 +1560,7 @@ Parallax
 	height: 380px;
 }
 
-/* Open and Close Button Styles */
+/* Open and Close Button Styles *
 
 #map-btn1-div {
 	width: 100%;
@@ -1605,7 +1605,7 @@ a.gmap-btn:focus {
 	color:#fff;
 }
 
-/* Google Map Div */
+/* Google Map Div *
 #map #google-map{
 	height: 500px;
 	display: block;

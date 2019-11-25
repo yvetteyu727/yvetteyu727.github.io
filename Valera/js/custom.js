@@ -178,17 +178,17 @@ $("button#huaiyangbtn").click(function() {
   });
 
   // map button toggle
-  $( ".gmap-btn" ).click(function(){
-    $( "#map-btn1" ).toggleClass( "btn-show", "btn-hide", 1000 );
-    $( "#map-btn1" ).toggleClass( "btn-hide", "btn-show", 1000 );
-    $( "#map-btn2" ).toggleClass( "btn-hide", "btn-show", 1000 );
-    $( "#map-btn2" ).toggleClass( "btn-show", "btn-hide", 1000 );
-    $( "#map-btn2" ).toggleClass( "close-map-button", "open-map-button", 1000 );
-    $( "#map-btn2" ).toggleClass( "open-map-button", "close-map-button", 1000 );
-    $( "#map" ).toggleClass( "close-map", "open-map", 1000 );
-    $( "#map" ).toggleClass( "open-map", "close-map", 1000 );
-    return false;
-  });
+  //$( ".gmap-btn" ).click(function(){
+   // $( "#map-btn1" ).toggleClass( "btn-show", "btn-hide", 1000 );
+   // $( "#map-btn1" ).toggleClass( "btn-hide", "btn-show", 1000 );
+  //  $( "#map-btn2" ).toggleClass( "btn-hide", "btn-show", 1000 );
+   // $( "#map-btn2" ).toggleClass( "btn-show", "btn-hide", 1000 );
+  //  $( "#map-btn2" ).toggleClass( "close-map-button", "open-map-button", 1000 );
+  //  $( "#map-btn2" ).toggleClass( "open-map-button", "close-map-button", 1000 );
+ //   $( "#map" ).toggleClass( "close-map", "open-map", 1000 );
+  //  $( "#map" ).toggleClass( "open-map", "close-map", 1000 );
+   // return false;
+ // });/
 
   function initNice() {
     if ($(window).innerWidth() <= 960) {
@@ -222,38 +222,6 @@ $(window).load(function() {
   $("#page-loader").delay(500).fadeOut("slow");
 });
 
-var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,}).addTo(map);
-                    var map = L.map('map')
-                          .addLayer(mapboxTiles)
-                          .setView([31.217756, 121.488283], 12);
-
-
-/layerGroup = L.layerGroup().addTo(map);/
-
-var items = [];
-var airtable_read_endpoint = "https://api.airtable.com/v0/appT9Y78c8u6UPG0h/yue?api_key=keypxZMYMv2UUxEw3";
-var data = [];
-$.getJSON(airtable_read_endpoint, function(result) {
-  $.each(result.records, function(key,value) {
-    items = {};
-    items["restaurant name"] = value.fields.restaurant_name;
-    items["city"] = value.fields.city;
-    items["per capita consumption"] = value.fields.per_capita_consumption;
-    items["rating"] = value.fields.rating
-    items["latitud"] = value.fields.Lat;
-    items["longitud"] = value.fields.Lng;
-    data.push(items);
-    console.log(items);
-                            }); // end .each
-                    }); // end getJSON
-       
-function show_districts(){
-  for (var i in data) {
-    var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
-    L.marker( latlng )
-    .bindPopup(data[i].restaurant_name + data[i].city + data[i].rating)
-    .addTo(layerGroup);};
-                    };
 
 
 
