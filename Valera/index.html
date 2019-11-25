@@ -416,7 +416,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
               <button type="button" class="btn btn-danger" onclick="show_district1();">Show on map</button>
               <br><br>
-              <div id="map" style="width: 100%; height: 500px"></div>
+              <div id="map-chuan" style="width: 100%; height: 500px"></div>
           </div>
           </div>       
               <div id="ludish" align="left" style="display: none;">
@@ -425,7 +425,7 @@
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <button type="button" class="btn btn-danger" onclick="show_district2();">Show on map</button>
                 <br><br>
-                <div id="map2" style="width: 100%; height: 500px"></div>
+                <div id="map-lu" style="width: 100%; height: 500px"></div>
             </div>
             </div>
             <div id="yuedish" align="left" style="display: none;">
@@ -666,7 +666,7 @@
 </html>
 <script>
 var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
-var map = L.map('map')
+var map = L.map('map-chuan')
 .addLayer(mapboxTiles)
 .setView([31.036195, 112.200656], 4);
                 
@@ -676,9 +676,9 @@ var data = [];
 $.getJSON(airtable_read_endpoint, function(result) {
   $.each(result.records, function(key,value) {
     items = {};
-    items["Resraurant Name"] = value.fields.restaurant_name;
-    items["Pronunciation"] = value.fields.pronunciation;
-    items["City"] = value.fields.city;
+    items["restaurant_name"] = value.fields.restaurant_name;
+    items["pronunciation"] = value.fields.pronunciation;
+    items["city"] = value.fields.city;
     items["lat"] = value.fields.lat;
     items["lng"] = value.fields.lng;
     data.push(items);
@@ -688,41 +688,9 @@ $.getJSON(airtable_read_endpoint, function(result) {
                     
 function show_district1(){
   for (var i in data) {
-    var latlng = L.latLng({ lat: data[i].lat, lng: data[i].lng});
+    var latlng = L.latLng({lat: data[i].lat, lng: data[i].lng});
     L.marker(latlng)
     .bindPopup(data[i].restaurant_name)
     .addTo(map);};};
-
-
-var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
-var map = L.map('map2')
-.addLayer(mapboxTiles)
-.setView([31.036195, 112.200656], 4);
-
-var map2_items = [];
-var airtable_read_endpoint = "https://api.airtable.com/v0/appT9Y78c8u6UPG0h/lu?api_key=keypxZMYMv2UUxEw3";
-var map2_data = [];
-$.getJSON(airtable_read_endpoint, function(result) {
-       $.each(result.records, function(key,value) {
-           map2_items = {};
-           items["Resraurant Name"] = value.fields.restaurant_name;
-    items["Pronunciation"] = value.fields.pronunciation;
-    items["City"] = value.fields.city;
-    items["lat"] = value.fields.lat;
-    items["lng"] = value.fields.lng;
-               map2_data.push(map2_items);
-               console.log(map2_items);
-        }); // end .each
-}); // end getJSON
-
-function show_districts2(){
-
-for (var i in map2_data) {
-  var latlng = L.latLng({ lat: map2_data[i].lat, lng: map2_data[i].lng});
-  L.marker(latlng)
-  .bindPopup(data[i].city)
-  .addTo(map);
-};
-};
 
 </script>
