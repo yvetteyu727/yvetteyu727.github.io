@@ -682,29 +682,29 @@ iconUrl: 'img/greenpin.png',
 iconSize: [20, 30]
 });
 //chuan cuisine restaurants                
-var items = [];
+var map1_items = [];
 var airtable_read_endpoint = "https://api.airtable.com/v0/appT9Y78c8u6UPG0h/chuan?api_key=keypxZMYMv2UUxEw3";
-var data = [];
+var map1_data = [];
 $.getJSON(airtable_read_endpoint, function(result) {
   $.each(result.records, function(key,value) {
-    items = {};
-    items["restaurant_name"] = value.fields.restaurant_name;
-    items["city"] = value.fields.city;
-    items["address"] = value.fields.address;
-    items["opening_hour"] = value.fields.opening_hour;
-    items["telephone_number"] = value.fields.telephone_number;
-    items["lat"] = value.fields.lat;
-    items["lng"] = value.fields.lng;
-    data.push(items);
-    console.log(items);
+    map1_items = {};
+    map1_items["restaurant_name"] = value.fields.restaurant_name;
+    map1_items["city"] = value.fields.city;
+    map1_items["address"] = value.fields.address;
+    map1_items["opening_hour"] = value.fields.opening_hour;
+    map1_items["telephone_number"] = value.fields.telephone_number;
+    map1_items["lat"] = value.fields.lat;
+    map1_items["lng"] = value.fields.lng;
+    map1_data.push(map1_items);
+    console.log(map1_items);
   }); 
 }); 
                     
 function show_district1(){
-  for (var i in data) {
-    var latlng = L.latLng({lat: data[i].lat, lng: data[i].lng});
+  for (var i in map1_data) {
+    var latlng = L.latLng({lat: map1_data[i].lat, lng: map1_data[i].lng});
     L.marker(latlng, {icon: blue})
-    .bindPopup(data[i].restaurant_name + '<br>' + data[i].city + '<br>' + '<img src = img/location.png> ' + data[i].address + '<br><img src = img/time.png> ' + data[i].opening_hour + '<br><img src = img/phone.png> ' + data[i].telephone_number)
+    .bindPopup(map1_data[i].restaurant_name + '<br>' + map1_data[i].city + '<br>' + '<img src = img/location.png> ' + map1_data[i].address + '<br><img src = img/time.png> ' + map1_data[i].opening_hour + '<br><img src = img/phone.png> ' + map1_data[i].telephone_number)
     .addTo(layerGroup);};};
 
 //lu cuisine restaurants
