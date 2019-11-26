@@ -410,36 +410,41 @@
           class="btn btn-skin" id='huaiyangbtn' style="margin: 5px; width: 20%;">Su Cuisine</button>
             </div>
           <br><br><br>
-          <div id="chuandish" align="left" style="display: none;">
+          <div id="chuandish" align="center" style="display: none;">
             <p align="center">Feel free to use the filter and sort tool at the top</p>
             <iframe class="airtable-embed" src="https://airtable.com/embed/shrX8ty0SvrFfFMll?backgroundColor=teal&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="450" style="background: transparent; border: 1px solid #ccc;"></iframe><br><br>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-              <button type="button" class="btn btn-danger" onclick="show_district1();">Show on map</button>
+              <button type="button" class="btn btn-info" style="margin: 10px; width: 20%;" onclick="show_district1();">Show on map</button><button type="button" style="margin: 10px; width: 20%" class="btn btn-info" onclick="clear_markers();">Clear Markers</button>
               <br><br>
-              <div id="map-chuan" style="width: 100%; height: 500px"></div>
           </div>
-          </div>       
-              <div id="ludish" align="left" style="display: none;">
+                 
+              <div id="ludish" align="center" style="display: none;">
                 <p align="center">Feel free to use the filter and sort tool at the top</p>
-              <iframe class="airtable-embed" src="https://airtable.com/embed/shrPTPqITcenpHIDJ?backgroundColor=teal&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="550" style="background: transparent; border: 1px solid #ccc;"></iframe><br><br>
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                <button type="button" class="btn btn-danger" onclick="show_district2();">Show on map</button>
+              <iframe class="airtable-embed" src="https://airtable.com/embed/shrBNcpShmEbpwzQK?backgroundColor=teal&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="450" style="background: transparent; border: 1px solid #ccc;"></iframe><br><br>
+              <button type="button" class="btn btn-info" style="margin: 10px; width: 20%;" onclick="show_district2();">Show on map</button><button type="button" style="margin: 10px; width: 20%;" class="btn btn-info" onclick="clear_markers();">Clear Markers</button>
                 <br><br>
-                <div id="map-lu" style="width: 100%; height: 500px"></div>
             </div>
-            </div>
-            <div id="yuedish" align="left" style="display: none;">
+            <div id="yuedish" align="center" style="display: none;">
               <p align="center">Feel free to use the filter and sort tool at the top</p>
-              <iframe class="airtable-embed" src="https://airtable.com/embed/shr1xbstJl6nGtytD?backgroundColor=teal&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="550" style="background: transparent; border: 1px solid #ccc;"></iframe></div>
-            <div id="huaiyangdish" align="left" style="display: none;">
-              <p align="center">Feel free to use the filter and sort tool at the top</p>
-                <iframe class="airtable-embed" src="https://airtable.com/embed/shrct7GhEkeQcGAZx?backgroundColor=teal&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="550" style="background: transparent; border: 1px solid #ccc;"></iframe>
+              <iframe class="airtable-embed" src="https://airtable.com/embed/shrKFSgqlDoTiT6aw?backgroundColor=teal&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="450" style="background: transparent; border: 1px solid #ccc;"></iframe><br><br>
+              <button type="button" class="btn btn-info" style="margin: 10px; width: 20%;" onclick="show_district3();">Show on map</button><button type="button" style="margin: 10px; width: 20%;" class="btn btn-info" onclick="clear_markers();">Clear Markers</button>
+              <br><br>
             </div>
-
+            <div id="huaiyangdish" align="center" style="display: none;">
+              <p align="center">Feel free to use the filter and sort tool at the top</p>
+              <iframe class="airtable-embed" src="https://airtable.com/embed/shrxTQ0K5xr0cqcmA?backgroundColor=teal&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe><br><br>
+              <button type="button" class="btn btn-info" style="margin: 10px; width: 20%;" onclick="show_district4();">Show on map</button><button type="button" style="margin: 10px; width: 20%;" class="btn btn-info" onclick="clear_markers();">Clear Markers</button>
+              <br><br>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                
+             
+                <div id="map" style="width: 66%; height: 400px; margin-left: 17%; background: transparent; border: 1px solid #ccc;"></div><br>
+                
+              </div>  
           </div> 
       </div>
       
-    </div>
       
   </section>
 
@@ -583,23 +588,6 @@
 
   <!-- /Section: contact -->
 
-  <!-- google map 
-  <div id="map-btn1-div">
-    <a id="map-btn1" class="gmap-btn close-map-button btn-show" href="#map">
-      Click here to open the map
-    </a>
-  </div>
-  <a id="map-btn2" class="btn btn-skin btn-lg btn-noradius gmap-btn close-map-button btn-hide" href="#map" title="Close google map"
-    data-toggle="tooltip" data-placement="top">
-    795 Folsom Ave, Suite 600 San Francisco, CA 94107
-  </a>-->
-
-  <!-- google map 
-  <section id="map" class="close-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </section>
-  /google map -->
-
 
   <footer>
     <div class="container">
@@ -665,11 +653,35 @@
 
 </html>
 <script>
+
 var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,});
-var map = L.map('map-chuan')
+var map = L.map('map')
 .addLayer(mapboxTiles)
-.setView([31.036195, 112.200656], 4);
-                
+.setView([35.675564, 105.950493], 4);
+
+layerGroup = L.layerGroup().addTo(map);
+
+      // create custom icon
+var red = L.icon({
+iconUrl: 'img/redpin.png',
+iconSize: [20, 30]
+});
+
+var yellow = L.icon({
+iconUrl: 'img/yellowpin.png',
+iconSize: [20, 30]
+});
+
+var blue = L.icon({
+iconUrl: 'img/bluepin.png',
+iconSize: [20, 30]
+});
+
+var green = L.icon({
+iconUrl: 'img/greenpin.png',
+iconSize: [20, 30]
+});
+//chuan cuisine restaurants                
 var items = [];
 var airtable_read_endpoint = "https://api.airtable.com/v0/appT9Y78c8u6UPG0h/chuan?api_key=keypxZMYMv2UUxEw3";
 var data = [];
@@ -677,20 +689,116 @@ $.getJSON(airtable_read_endpoint, function(result) {
   $.each(result.records, function(key,value) {
     items = {};
     items["restaurant_name"] = value.fields.restaurant_name;
-    items["pronunciation"] = value.fields.pronunciation;
     items["city"] = value.fields.city;
+    items["address"] = value.fields.address;
+    items["opening_hour"] = value.fields.opening_hour;
+    items["telephone_number"] = value.fields.telephone_number;
     items["lat"] = value.fields.lat;
     items["lng"] = value.fields.lng;
     data.push(items);
     console.log(items);
-  }); // end .each
-}); // end getJSON
+  }); 
+}); 
                     
 function show_district1(){
   for (var i in data) {
     var latlng = L.latLng({lat: data[i].lat, lng: data[i].lng});
-    L.marker(latlng)
-    .bindPopup(data[i].restaurant_name)
-    .addTo(map);};};
+    L.marker(latlng, {icon: blue})
+    .bindPopup(data[i].restaurant_name + '<br>' + data[i].city + '<br>' + '<img src = img/location.png> ' + data[i].address + '<br><img src = img/time.png> ' + data[i].opening_hour + '<br><img src = img/phone.png> ' + data[i].telephone_number)
+    .addTo(layerGroup);};};
+
+//lu cuisine restaurants
+var map2_items = [];
+var airtable_read_endpoint = "https://api.airtable.com/v0/appvSIErl4H3a5iMb/lu?api_key=keypxZMYMv2UUxEw3";
+var map2_data = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+       $.each(result.records, function(key,value) {
+           map2_items = {};
+               map2_items["restaurant_name"] = value.fields.restaurant_name;
+               map2_items["city"] = value.fields.city;
+               map2_items["address"] = value.fields.address;
+               map2_items["opening_hour"] = value.fields.opening_hour;
+               map2_items["telephone_number"] = value.fields.telephone_number;
+               map2_items["lat"] = value.fields.lat;
+               map2_items["lng"] = value.fields.lng;
+               map2_data.push(map2_items);
+               console.log(map2_items);
+        }); 
+}); 
+
+function show_district2(){
+
+for (var i in map2_data) {
+  var latlng = L.latLng({ lat: map2_data[i].lat, lng: map2_data[i].lng });
+  L.marker(latlng, {icon: red})
+  .bindPopup(map2_data[i].restaurant_name + '<br>' + map2_data[i].city + '<br>' + '<img src = img/location.png> ' + map2_data[i].address + '<br><img src = img/time.png> ' + map2_data[i].opening_hour + '<br><img src = img/phone.png> ' + map2_data[i].telephone_number)
+  .addTo(layerGroup);
+};
+};
+
+//yue cuisine restaurants
+var map3_items = [];
+var airtable_read_endpoint = "https://api.airtable.com/v0/appLfv7ydKJO0NKJn/yue?api_key=keypxZMYMv2UUxEw3";
+var map3_data = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+       $.each(result.records, function(key,value) {
+           map3_items = {};
+               map3_items["restaurant_name"] = value.fields.restaurant_name;
+               map3_items["city"] = value.fields.city;
+               map3_items["address"] = value.fields.address;
+               map3_items["opening_hour"] = value.fields.opening_hour;
+               map3_items["telephone_number"] = value.fields.telephone_number;
+               map3_items["lat"] = value.fields.lat;
+               map3_items["lng"] = value.fields.lng;
+               map3_data.push(map3_items);
+               console.log(map3_items);
+        }); // end .each
+}); // end getJSON
+
+function show_district3(){
+
+for (var i in map3_data) {
+  var latlng = L.latLng({ lat: map3_data[i].lat, lng: map3_data[i].lng });
+  L.marker(latlng, {icon: green})
+  .bindPopup(map3_data[i].restaurant_name + '<br>' + map3_data[i].city + '<br>' + '<img src = img/location.png> ' + map3_data[i].address + '<br><img src = img/time.png> ' + map3_data[i].opening_hour + '<br><img src = img/phone.png> ' + map3_data[i].telephone_number)
+  .addTo(layerGroup);
+};
+};
+
+//huaiyang cuisine restaurants
+
+var map4_items = [];
+var airtable_read_endpoint = "https://api.airtable.com/v0/appkB5UU6CDOdyI16/huaiyang?api_key=keypxZMYMv2UUxEw3";
+var map4_data = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+       $.each(result.records, function(key,value) {
+           map4_items = {};
+           map4_items["restaurant_name"] = value.fields.restaurant_name;
+               map4_items["city"] = value.fields.city;
+               map4_items["address"] = value.fields.address;
+               map4_items["opening_hour"] = value.fields.opening_hour;
+               map4_items["telephone_number"] = value.fields.telephone_number;
+               map4_items["lat"] = value.fields.lat;
+               map4_items["lng"] = value.fields.lng;
+               map4_data.push(map4_items);
+               console.log(map4_items);
+        });
+}); 
+
+function show_district4(){
+
+for (var i in map4_data) {
+  var latlng = L.latLng({ lat: map4_data[i].lat, lng: map4_data[i].lng });
+  L.marker(latlng, {icon: yellow})
+  .bindPopup(map4_data[i].restaurant_name + '<br>' + map4_data[i].city + '<br>' + '<img src = img/location.png> ' + map4_data[i].address + '<br><img src = img/time.png> ' + map4_data[i].opening_hour + '<br><img src = img/phone.png> ' + map4_data[i].telephone_number)
+  .addTo(layerGroup);
+};
+};
+
+function clear_markers () {
+               layerGroup.clearLayers();
+}
+
 
 </script>
+
