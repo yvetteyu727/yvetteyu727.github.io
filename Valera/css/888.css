@@ -277,51 +277,6 @@ blockquote strong {
     outline: 0;
 }
 
-.nav .nav-restaurant {
-	display: inline;
-}
-
-.nav-pills .pill-1 .nav-link:not(.active) {
-	background-color: #FE7A66;
-	color: white;
-}
-
-.nav-pills .pill-2 .nav-link:not(.active) {
-	background-color: #FE7A66;
-	color: white;
-}
-
-.nav-pills .pill-3 .nav-link:not(.active) {
-    background-color: #FE7A66;
-    color: white;
-}
-
-.nav-pills .pill-4 .nav-link:not(.active) {
-    background-color: #FE7A66;
-    color: white;
-}
-
-
-/* active (faded) */
-.nav-pills .pill-1 .nav-link:focus {
-    background-color: lightgray;
-    color: black;
-}
-
-.nav-pills .pill-2 .nav-link:focus{
-    background-color: lightgray;
-    color: black;
-}
-
-.nav-pills .pill-3 .nav-link:focus {
-    background-color: lightgray;
-    color: black;
-}
-
-.nav-pills .pill-4 .nav-link:focus {
-    background-color: lightgray;
-    color: black;
-}
 
 /* loader */
 #page-loader {
@@ -1587,7 +1542,7 @@ Parallax
     background: #ffcc00;
 }
 
-/* Google Map */
+/* Google Map *
 #map{
 	position: relative;
 	overflow: hidden;
@@ -1596,7 +1551,7 @@ Parallax
 	transition: all 0.7s;
 }
 
-/* Open and Close Styles */
+/* Open and Close Styles *
 .close-map{
 	height: 0;
 }
@@ -1605,7 +1560,7 @@ Parallax
 	height: 380px;
 }
 
-/* Open and Close Button Styles */
+/* Open and Close Button Styles *
 
 #map-btn1-div {
 	width: 100%;
@@ -1810,10 +1765,11 @@ a.btn:focus{
 .btn-skin:focus,
 .btn-skin:active,
 .btn-skin.active {
-	color: white;
-  background-color: lightgray;
-  border-color:rgba(255,255,255,.6);
+  color: #fff;
+  background-color: #666;
+  border-color: #666;
 }
+
 
 .btn-default:hover,
 .btn-default:focus {
@@ -1831,6 +1787,7 @@ a.btn:focus{
 .banner-social-buttons {
     margin-top: 0;
 }
+
 
 /* Media queries */
 
