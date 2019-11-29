@@ -1,42 +1,42 @@
 a:hover,
 a:focus {
-    color: #FE7A66;
+    color: #CD5C5C;
 }
 
 a,.tp-caption a.btn:hover {
-	color: #FE7A66;
+	color: #CD5C5C;
 }
 .top-nav-collapse {
-	background: #FE7A66;
+	background: #CD5C5C;
 }
 
 .navbar-custom ul.nav ul.dropdown-menu li a:hover {
-	color: #FE7A66;
+	color: #CD5C5C;
 }
 
-.team-wrapper-big:hover .team-wrapper-overlay, .team-wrapper-small:hover .team-wrapper-overlay { background: #FE7A66; }
+.team-wrapper-big:hover .team-wrapper-overlay, .team-wrapper-small:hover .team-wrapper-overlay { background: #CD5C5C; }
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: #FE7A66;
+    background-color: #CD5C5C;
 }
 
 .widget-avatar .avatar:hover {
-    border: 5px solid #FE7A66;
+    border: 5px solid #CD5C5C;
 }
 
 .bg-skin {
-	background: #FE7A66;
+	background: #CD5C5C;
 }
 
 .highlight-color {
-	background-color: #FE7A66;
+	background-color: #CD5C5C;
 }
 
 
 /* pricing box  */
 .pricing-box.skin {
-	background: #FE7A66;
+	background: #CD5C5C;
 }
 
 
@@ -48,23 +48,23 @@ a,.tp-caption a.btn:hover {
 /* blog */
 
 ul.comment-meta li a:hover {
-	color: #FE7A66;
+	color: #CD5C5C;
 }
 
 ul.comment-meta li.reply a {
-	background: #FE7A66;
+	background: #CD5C5C;
 }
 
 .pagination > li > a,
 .pagination > li > span {
-  color: #FE7A66;
+  color: #CD5C5C;
 }
 
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #FE7A66;
+  color: #CD5C5C;
 }
 
 .pagination > .active > a,
@@ -73,43 +73,43 @@ ul.comment-meta li.reply a {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #FE7A66;
-  border-color: #FE7A66;
+  background-color: #CD5C5C;
+  border-color: #CD5C5C;
 }
 .sidebar .widget ul li a:hover {
-	color: #FE7A66;
+	color: #CD5C5C;
 }
 
 .widget .tagcloud a {
-  background: #FE7A66;
+  background: #CD5C5C;
 }
 
-.flex-control-paging li a.flex-active { background: #FE7A66;
+.flex-control-paging li a.flex-active { background: #CD5C5C;
 	}
 /* team */
 .team-box {
-	background: #FE7A66;
+	background: #CD5C5C;
 }
 
 form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus {
-	border-color: #FE7A66;
+	border-color: #CD5C5C;
 }
 form.search-form input:focus {
-	border-color: #FE7A66;
+	border-color: #CD5C5C;
 }
 
 /* footer */
 ul.footer-menu li a:hover {
-	color: #FE7A66;
+	color: #CD5C5C;
 }
 
 footer a.totop:hover {
-	color: #FE7A66;
+	color: #CD5C5C;
 }
 
 
 .btn-skin {
   color: #fff;
-  background-color: #FE7A66;
-  border-color: #FE7A66;
+  background-color: #CD5C5C;
+  border-color: #CD5C5C;
 }

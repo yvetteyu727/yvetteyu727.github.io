@@ -256,14 +256,14 @@ blockquote strong {
 .navbar-custom .nav li.active {
     outline: 0;
     background-color: rgba(255,255,255,.2);
-    color: #FE7A66;
+    color: #CD5C5C;
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li.active {
     outline: 0;
     background-color: rgba(255,255,255,.2);
-    color: #FE7A66;
+    color: #CD5C5C;
 }
 
 .navbar-toggle {
@@ -282,27 +282,27 @@ blockquote strong {
 }
 
 .nav-pills .pill-1 .nav-link:not(.active) {
-	background-color: #FE7A66;
+	background-color: #CD5C5C;
 	color: white;
 }
 
 .nav-pills .pill-2 .nav-link:not(.active) {
-	background-color: #FE7A66;
+	background-color: #CD5C5C;
 	color: white;
 }
 
 .nav-pills .pill-3 .nav-link:not(.active) {
-    background-color: #FE7A66;
+    background-color: #CD5C5C;
     color: white;
 }
 
 .nav-pills .pill-4 .nav-link:not(.active) {
-    background-color: #FE7A66;
+    background-color: #CD5C5C;
     color: white;
 }
 
 .nav-pills .tut .nav-link:not(.active) {
-    background-color: #FE7A66;
+    background-color: #CD5C5C;
 	color: white;
 margin-bottom: 2px;
 }
@@ -1409,8 +1409,8 @@ Parallax
 	background-image: url(../img/parallax/4.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    display: block;
-    position: relative;
+    display:block;
+    position: relative to #abc;
     z-index:120;
 }
 
