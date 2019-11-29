@@ -84,7 +84,7 @@ $("button#huaiyangbtn").click(function() {
 
   //owl carousel
   $('#owl-works').owlCarousel({
-    items: 4,
+    items: 5,
     itemsDesktop: [1199, 5],
     itemsDesktopSmall: [980, 5],
     itemsTablet: [768, 5],
