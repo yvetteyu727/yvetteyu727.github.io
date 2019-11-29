@@ -301,6 +301,11 @@ blockquote strong {
     color: white;
 }
 
+.nav-pills .tut .nav-link:not(.active) {
+    background-color: #FE7A66;
+    color: white;
+}
+
 
 /* active (faded) */
 .nav-pills .pill-1 .nav-link:focus {
@@ -319,6 +324,11 @@ blockquote strong {
 }
 
 .nav-pills .pill-4 .nav-link:focus {
+    background-color: lightgray;
+    color: black;
+}
+
+.nav-pills .tut .nav-link:focus {
     background-color: lightgray;
     color: black;
 }
@@ -1394,6 +1404,27 @@ Parallax
 	z-index: -1;
 }
 
+#parallax4{
+	background-image: url(../img/parallax/4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display:block;
+    position:relative;
+    z-index:120;
+}
+
+#parallax4:after  {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC);
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	opacity: 0.9;
+	z-index: -1;
+}
+
 /* === testimonial slide === */
 .testimonialslide {
 	margin-top:0;
@@ -1587,89 +1618,6 @@ Parallax
     background: #ffcc00;
 }
 
-/* Google Map */
-#map{
-	position: relative;
-	overflow: hidden;
-	-webkit-transition: all 0.7s;
-	-moz-transition: all 0.7s;
-	transition: all 0.7s;
-}
-
-/* Open and Close Styles */
-.close-map{
-	height: 0;
-}
-
-.open-map{
-	height: 380px;
-}
-
-/* Open and Close Button Styles */
-
-#map-btn1-div {
-	width: 100%;
-	background: #555;
-}
-
-a.gmap-btn.btn-show {
-	display: block;
-}
-a.gmap-btn.btn-hide {
-	display: none;
-}
-a.gmap-btn{
-	height: auto;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	position: relative;
-	z-index: 2;
-	cursor: pointer;
-	-webkit-transition: all 0.7s;
-	-moz-transition: all 0.7s;
-	transition: all 0.7s;
-}
-
-a.gmap-btn:focus {
-	outline: 0;
-}
-
-.close-map-button{
-	padding:10px;
-	opacity: 1;
-}
-
-.open-map-button{
-	padding:10px;
-	opacity: 0.5;
-}
-
-#map .google-map-big-button:hover{
-	background:#3498db;
-	color:#fff;
-}
-
-/* Google Map Div */
-#map #google-map{
-	height: 500px;
-	display: block;
-	position: absolute;
-	bottom:0;
-	width: 100%;
-	z-index: 1;
-	-webkit-transition: all 0.7s;
-	-moz-transition: all 0.7s;
-	transition: all 0.7s;
-}
-
-.close-map #google-map{
-	opacity: 0;
-}
-
-.open-map #google-map{
-	opacity: 1;
-}
 
 /* blink btn */
 .blink {
