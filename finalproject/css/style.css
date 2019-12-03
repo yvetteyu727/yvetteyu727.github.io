@@ -1372,6 +1372,7 @@ Parallax
 	top: 0;
 	opacity: 0.9;
 	z-index: -1;
+
 }
 
 
@@ -1424,7 +1425,7 @@ Parallax
     background-position: center;
     background-repeat: no-repeat;
     display:block;
-    position: relative to #abc;
+    position: relative;
 	z-index:120;
 	max-width: 100%;
 }
