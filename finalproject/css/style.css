@@ -152,6 +152,17 @@ blockquote strong {
     font-weight: 400;
 }
 
+img { max-width: 100%; }
+
+iframe {max-width: 100%;}
+
+.btn-scroll{max-width: 100%;}
+
+.btn-info{max-width: 100%;
+font-size: 100%;}
+
+
+
 
 
 /* ------- Navigation ------------ */
@@ -759,7 +770,7 @@ hr.bold {
 --- Team
 ============================ */
 
-.team-wrapper-big, .team-wrapper-small { width: 100%; position: relative; text-align: center; }
+.team-wrapper-big, .team-wrapper-small { width: 100%; position: relative; text-align: center; margin: 10px; }
 .team-wrapper-big img, .team-wrapper-small img { width: 100%; }
 .team-wrapper-big:hover .team-wrapper-overlay h5 { bottom: 70%; color: #fff; visibility: visible; }
 .team-wrapper-big:hover .team-wrapper-overlay h6, .team-wrapper-small:hover .team-wrapper-overlay h6 { bottom: 60%; color: #fff; }
@@ -768,7 +779,7 @@ hr.bold {
 
 .team-wrapper-small:hover .team-wrapper-overlay .social-icons { -webkit-transition: opacity 0.4s; -webkit-transition-delay: 0.2s; -moz-transition: opacity 0.4s 0.2s; -o-transition: opacity 0.4s 0.2s; transition: opacity 0.4s 0.2s; }
 
-.team-wrapper-overlay { position: absolute; height: 100%; width: 100%; -webkit-transition: background 0.3s; -moz-transition: background 0.3s; -o-transition: background 0.3s; transition: background 0.3s; }
+.team-wrapper-overlay { position: absolute;height: 100%; width: 100%; -webkit-transition: background 0.3s; -moz-transition: background 0.3s; -o-transition: background 0.3s; transition: background 0.3s; }
 .team-wrapper-overlay h5 { visibility: hidden; position: absolute; width: 100%; margin: 15px 0; -webkit-transition: bottom 0.3s; -moz-transition: bottom 0.3s; -o-transition: bottom 0.3s; transition: bottom 0.3s; }
 .team-wrapper-overlay h6 { bottom: -40px; }
 .team-wrapper-overlay p { color: #eee; position: absolute; width: 100%; top: 35%; padding: 0 20px; opacity: 0;
@@ -1859,9 +1870,7 @@ a.btn:focus{
 		background: #444;
 	}
 
-	.service-box {
-		margin-bottom: 50px;
-	}
+	
 
 	.team-wrap {
 		margin-bottom: 30px;
@@ -1877,7 +1886,11 @@ a.btn:focus{
 
 }
 
+
 @media (max-width:480px) {
+	.service-box {
+		margin-bottom: 50px;
+	}
 
 	.navbar-custom .nav.navbar-nav {
     background-color: rgba(255,255,255,.4);
